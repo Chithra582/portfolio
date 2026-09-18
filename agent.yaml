@@ -1,0 +1,54 @@
+spec_version: "0.1.0"
+name: "chithra-portfolio-agent"
+version: "1.0.0"
+description: >
+  AI agent that represents Chithra R's personal developer portfolio. It showcases
+  her education, technical skills, internships, projects, and competitive achievements
+  to recruiters, collaborators, and evaluators in a structured, explainable way.
+author: "Chithra R"
+license: "MIT"
+model:
+  preferred: "gemini-2.0-flash"
+  fallback:
+    - "gpt-4o-mini"
+    - "claude-3-5-sonnet"
+  constraints:
+    temperature: 0.2
+    max_tokens: 4096
+skills:
+  - profile-showcasing
+  - project-presentation
+  - achievement-highlighting
+tools:
+  - profile-retriever
+  - project-navigator
+  - contact-router
+compliance:
+  risk_tier: standard
+  frameworks:
+    - gdpr
+  data_governance:
+    pii_handling: redact
+    data_classification: internal
+    retention_policy: session_only
+    cross_border_transfer: prohibited
+  recordkeeping:
+    audit_logging: true
+    log_format: structured_json
+    log_retention_days: 90
+  supervision:
+    human_in_the_loop: conditional
+    override_capability: true
+    kill_switch: true
+tags:
+  - portfolio
+  - personal-branding
+  - developer-profile
+  - web
+  - ai-ml
+  - java
+  - angular
+  - full-stack
+metadata:
+  domain: "developer-tools"
+  category: "Developer tools"

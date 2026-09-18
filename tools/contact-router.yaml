@@ -1,0 +1,23 @@
+name: contact-router
+description: Routes recruiter and collaborator inquiries to the appropriate contact channel for Chithra R based on the inquiry type.
+version: "1.0.0"
+input_schema:
+  type: object
+  properties:
+    inquiry_type:
+      type: string
+      enum: [hiring, collaboration, general, technical]
+      description: "Type of inquiry to route"
+  required:
+    - inquiry_type
+output_schema:
+  type: object
+  properties:
+    channel:
+      type: string
+    url:
+      type: string
+    instructions:
+      type: string
+    disclaimer:
+      type: string

@@ -1,0 +1,35 @@
+name: profile-retriever
+description: Retrieves structured profile data for Chithra R including education, CGPA, skills list, and publicly stated contact channels.
+version: "1.0.0"
+input_schema:
+  type: object
+  properties:
+    detail_level:
+      type: string
+      enum: [summary, full]
+      description: "summary returns headline stats; full returns all profile fields"
+  required: []
+output_schema:
+  type: object
+  properties:
+    name:
+      type: string
+    institution:
+      type: string
+    year:
+      type: string
+    cgpa:
+      type: number
+    skills:
+      type: array
+      items:
+        type: string
+    contact:
+      type: object
+      properties:
+        email:
+          type: string
+        linkedin:
+          type: string
+        github:
+          type: string

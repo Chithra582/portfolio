@@ -1,0 +1,34 @@
+name: project-navigator
+description: Lists and describes all projects in Chithra R's portfolio with tech stack details, GitHub links, and domain classification.
+version: "1.0.0"
+input_schema:
+  type: object
+  properties:
+    project_name:
+      type: string
+      description: "Specific project name to retrieve. Omit to list all projects."
+    domain:
+      type: string
+      enum: [web, ml, all]
+      description: "Filter projects by domain"
+  required: []
+output_schema:
+  type: object
+  properties:
+    projects:
+      type: array
+      items:
+        type: object
+        properties:
+          name:
+            type: string
+          domain:
+            type: string
+          tech_stack:
+            type: array
+            items:
+              type: string
+          github_url:
+            type: string
+          summary:
+            type: string
