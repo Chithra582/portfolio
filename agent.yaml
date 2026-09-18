@@ -30,8 +30,6 @@ compliance:
   data_governance:
     pii_handling: redact
     data_classification: internal
-    retention_policy: session_only
-    cross_border_transfer: prohibited
   recordkeeping:
     audit_logging: true
     log_format: structured_json
