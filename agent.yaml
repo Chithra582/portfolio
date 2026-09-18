@@ -35,7 +35,6 @@ compliance:
   recordkeeping:
     audit_logging: true
     log_format: structured_json
-    log_retention_days: 90
   supervision:
     human_in_the_loop: conditional
     override_capability: true
